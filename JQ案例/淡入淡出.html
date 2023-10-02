@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $("#b1").click(function(){
+                $("img").show()
+            })
+            $("#b2").click(function(){
+                $("img").hide()
+            })
+            $("#b3").click(function(){
+                $("img").show(2000)
+            })
+            $("#b4").click(function(){
+                $("img").hide(2000)
+            })
+            $("#b5").click(function(){
+                $("img").show()
+            })
+            $("#b6").click(function() {
+                // 下滑动 slideDown()
+                $("img").slideDown();
+            })
+            $("#b7").click(function() {
+                // 上滑动 slideUp()
+                $("img").slideUp(500);
+            })
+            $("#b8").click(function() {
+                // 滑动切换 slideToggle()
+                $("img").slideToggle(500);
+            })
+            $("#b9").click(function() {
+                // 淡入 fadeIn()
+                $("#myImage4").fadeIn(1000);
+            })
+            $("#b10").click(function() {
+                // 淡出 fadeOut()
+                $("#myImage4").fadeOut(1000);
+
+            })
+            $("#b11").click(function() {
+                //  修改透明度 fadeTo() 这个速度和透明度要必须写
+                $("#myImage4").fadeTo(1000, 0.5);
+
+            });
+            $("#b12").click(function() {
+                // 淡入淡出切换 fadeToggle()
+                $("#myImage4").fadeToggle(1000);
+
+            });
+            $("#b13").click(function(){
+                $("#myImage4").animate({
+                    left: 500,
+                    top: 300,
+                    opacity: .4,
+                    width: 500
+                }, 500);
+            })
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <input id="b1" type="button" value="所有图片显示"/> 
+        <input id="b2" type="button" value="所有图片隐藏"/>   
+        <input id="b3" type="button" value="所有图片延时显示（2秒）"/> 
+        <input id="b4" type="button" value="所有图片延时隐藏（2秒）"/> 
+        <input id="b5" type="button" value="所有图片切换元素的可见状态"/> <br>       
+        <input id="b6" type="button" value="所有图片滑动向下放大" /> 
+        <input id="b7" type="button" value="所有图片滑动向上缩小"/> 
+        <input id="b8" type="button" value="所有图片切换滑动效果"/> <br>     
+        <input id="b9" type="button" value="image4图片淡入" />
+        <input id="b10" type="button" value="image4图片淡出" />  <br> 
+        <input id="b11" type="button" value="image4图片调整到指定透明度(0.25)"/>
+        <input id="b12" type="button" value="image4图片先淡入再淡出"/> 
+        <input id="b13" type="button" value="自定义动画"/> 
+
+    </div> 
+
+    <img id="myImage1"  src="img/images/1.jpg" style="display:none;width: 320px;height: 320px" /> 
+    <img id="myImage2"  src="img/images/2.jpg" style="display:none;width: 320px;height: 320px" /> 
+    <img id="myImage3"  src="img/images/3.jpg" style="display:none;width: 320px;height: 320px" /> 
+    <img id="myImage4"  src="img/images/11.jpg" style="display:none;width: 320px;height: 320px" /> 
+    <img id="myImage4"  src="img/images/11.jpg" style="display:none;width: 320px;height: 320px" /> 
+</body>
+</html>

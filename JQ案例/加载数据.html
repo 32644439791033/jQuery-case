@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#test1").click(function(){
+               $("#respText").load("Data_Table.html");
+            });
+            
+            $("#test2").click(function(){
+               $("#respText").load("Data_XML.xml");
+            });
+        })
+    </script>
+</head>
+<body>
+    <button id="test1">获取数据(Data_Table.html)</button><br>
+		<button id="test2">获取外部数据(Data_XML.xml)</button><br>
+		<!-- <button id="test3">获取外部数据籍贯(Data_XML.txt)</button> -->
+		<button id="test4">获取外部数据，若成功，弹出对话框</button>
+		<div id="respText"></div>
+</body>
+</html>

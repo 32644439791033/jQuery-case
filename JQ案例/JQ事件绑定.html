@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ事件绑定</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+</script>
+		
+<script type="text/javascript">
+    $(function(){
+        $('#b1').click(function(){
+                // $("#d2").hide();
+                $("#d2").toggle();
+            });
+            $('#b2').click(function(){
+                // $("#d2").show();
+                $("#d2").toggle();
+            });
+            $("#b3").hover(function() {
+					$("#d2").show();
+				}, function() {
+					$("#d2").hide();
+				});
+        $("#b4").unbind("click"); //解除元素的单击功能
+    })
+</script>
+</head>
+<body>
+    <div id="d1">
+        <input type="button" name="b1" id="b1" value="单击事件，实现DIV2隐藏显示切换" /><br/>
+        <input type="button" name="b2" id="b2" value="双击事件，实现DIV2隐藏显示切换" /><br/>
+        <input type="button" name="b3" id="b3" value="悬停切换，实现DIV2隐藏显示切换" /><br/>
+        <input type="button" name="b4" id="b4" value="取消B1单击事件" /><br/>
+    </div>
+    <div id="d2" style="width: 100px;height: 100px;border:crimson 2px solid;">
+    </div>
+</body>
+</html>

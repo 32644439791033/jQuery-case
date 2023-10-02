@@ -1,0 +1,111 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>制作简单的页面导航</title>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    $(function(){
+        $(document).ready(function(){
+            $("nav ul li").click(function(){
+                $(this).attr("class","onActive");
+                $(this).siblings().removeClass("onActive");
+                var a1=$(this).find("a").text();
+                if(a1=="导航1"){
+                    $(".nav-1").css("display","block");
+                }else{
+                    $(".nav-1").css("display","none" );
+
+                }
+            });
+        });
+
+    })
+</script>
+<style>
+   *{margin:0;padding:0;box-sizing:border-box}
+   .nav{width:800px;margin:10px auto;}
+   .nav ul{list-style:none;height:30px;}
+   .nav ul li{
+	   width:100px;
+	   height:30px;
+	   line-height:30px;
+	   text-align:center;
+	   float:left;
+	   background-color:#CCCCCC;
+   }    
+   .nav ul li a{
+	   display:block;
+	   width:100%;
+	   height:100%;
+	   text-decoration:none;
+	   color:black;
+    }
+	
+   .nav ul li:hover{ 
+       background-color:#03A9F4;
+	   cursor:pointer;
+   }
+   .nav ul li.onActive{
+	   background-color:#03A9F4;
+   }
+   
+   .nav1-1{width:800px;margin:10px auto;display:none;}
+   .nav1-1 ul{list-style:none;height:30px;}
+   .nav1-1 ul li{
+	   width:100px;
+	   height:30px;
+	   line-height:30px;
+	   text-align:center;
+	   float:left;
+	   background-color:#CCCCCC;
+   }    
+   .nav1-1 ul li a{
+	   display:block;
+	   width:100%;
+	   height:100%;
+	   text-decoration:none;
+	   color:black;
+    }
+	
+   .nav1-1 ul li:hover{ 
+       background-color:#03A9F4;
+	   cursor:pointer;
+   }
+   .nav1-1 ul li.onActive{
+	   background-color:#03A9F4;
+   }
+   
+
+</style>
+</head>
+<body>
+<div class="nav">
+<ul>
+   <li><a>导航1</a></li>
+   <li class="onActive"><a>导航2</a></li>
+   <li><a>导航3</a></li>
+   <li><a>导航4</a></li>
+   <li><a>导航5</a></li>
+   <li><a>导航6</a></li>
+   <li><a>导航7</a></li>
+   <li><a>导航8</a></li>
+</ul>
+</div>
+<div class="nav1-1">
+<ul>
+   <li class="onActive"><a>导航1-1</a></li>
+   <li><a>导航1-2</a></li>
+   <li><a>导航1-3</a></li>
+   <li><a>导航1-4</a></li>
+   <li><a>导航1-5</a></li>
+   <li><a>导航1-6</a></li>
+   <li><a>导航1-7</a></li>
+   <li><a>导航1-8</a></li>
+</ul>
+</div>
+
+
+</body>
+</html>

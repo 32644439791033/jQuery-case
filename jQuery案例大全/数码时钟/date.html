@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>无标题文档</title>
+
+</head>
+
+<body>
+	<div id="div">
+		<img src="img/0.png" />
+		<img src="img/8.png" />
+		时
+		<img src="img/1.png" />
+		<img src="img/5.png" />
+		分
+		<img src="img/0.png" />
+		<img src="img/9.png" />
+		秒
+	</div>
+</body>
+<script src="common.js"></script>
+<script type="text/javascript">
+
+	function timeView() {
+		var now = new Date(),
+			hour = addZero(now.getHours()),
+			min = addZero(now.getMinutes()),
+			sec = addZero(now.getSeconds());
+		var imgs = div.children;
+		imgs[0].src = "img/" + hour[0] + ".png";
+		imgs[1].src = "img/" + hour[1] + ".png";
+		imgs[2].src = "img/" + min[0] + ".png";
+		imgs[3].src = "img/" + min[1] + ".png";
+		imgs[4].src = "img/" + sec[0] + ".png";
+		imgs[5].src = "img/" + sec[1] + ".png";
+	}
+	timeView();
+	setInterval(timeView, 1000);
+</script>
+
+</html>

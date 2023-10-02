@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>DOM节点-父子节点</title> 
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<style>
+.ancestors *
+{ 
+	display: block;
+	border: 2px solid lightgrey;
+	color: lightgrey;
+	padding: 5px;
+	margin: 15px;
+}
+</style>
+<script>
+    $(function(){
+        $("#b1").click(function(){
+            $("ul li:first").css({"color":"red","border":"2px solid red"});
+        });
+        $("#b2").click(function(){
+            $("ul li:first").parent().css({"color":"red","border":"2px solid blue"});
+        });
+        $("#b3").click(function(){
+            $("ul li:first").parentsUntil("div ancestors").css({"color":"red","border":"2px solid green"});
+        });
+        $("#b4").click(function(){
+            $("ul li:first").parentsUntil("body").css({"color":"red","border":"2px solid blue"});
+        });
+        $("#b5").click(function(){
+            $("ul li:first").siblings().css({"color":"red","border":"2px solid blue"});
+        });
+        $("#b6").click(function(){
+            $(" li:first").siblings().css({"color":"red","border":"2px solid green"});
+            // $("ul li:first").siblings().children.css({"color":"red","border":"2px solid green"});
+        });
+        $("#b7").click(function(){
+            $("ul li:first").siblings().css({"color":"red","border":"2px solid green"});
+            $("ul li:first").siblings().children.css({"color":"red","border":"2px solid green"});
+        });
+
+    })
+</script>
+</head>
+
+<body>
+<div class="ancestors">div (曾祖父元素)
+  <div style="width:500px;" class="ancestor">div (祖父元素)
+    <ul>ul (父元素)  
+      <li>li (我元素)
+        <span>span</span>
+      </li>
+      <li>li (兄弟元素)
+        <span>span</span>
+      </li>
+    </ul>   
+  </div>
+</div>
+<input type="button" id="b1" value="[我元素]显示红色框" /><br>
+<input type="button" id="b2" value="[我元素]的父元素显示蓝色框" /><br>
+<input type="button" id="b3" value="[我元素]的祖父元素显示绿色框" /><br>
+<input type="button" id="b4" value="[我元素]的曾祖父元素显示蓝色框" /><br>
+<input type="button" id="b5" value="[我元素]的同胞元素显示蓝色框" /><br>
+<input type="button" id="b6" value="[我元素]的子元素显示绿色框" /><br>
+<input type="button" id="b7" value="[我元素]的同胞元素及其子元素显示绿色框" /><br>
+</body>
+
+</html>

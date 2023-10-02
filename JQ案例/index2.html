@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.js"></script>
+
+    <style>
+        /* *{
+            padding: 0;
+            margin: 0;
+        }
+        h2{
+            text-align: center;
+        }
+        hr{
+            margin: 10px;
+        }
+        .c1{
+            font-style: 10px;
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+
+        }
+        .c2{
+            text-indent: 2em;
+            font-weight: bold;
+            line-height: 25px;
+            
+        } */
+    </style>
+</head>
+<body>
+    <div id="div1" style="backgroud-color:#eee" width="100px" height="120px">
+        <h2>湖南软件职业学院</h2>
+        <p id="p1" class="c1">发布日期:2018-03-07 点击次数:233103</p><hr>
+        <p id="p2" class="c2">湖南软件职业学院坐落于伟人故里、人文圣地湘潭，地处长株潭核心区域，位于国家级湘潭经济技术开发区，是经湖南省人民政府批准、教育部备案成立的全日制普通高等职业院校，是教育部人才培养工作评估合格高校、湖南省示范性（骨干）高职院校、湖南省文明高校、湖南省平安高校。   </p>
+    </div>
+<button id="b1">设置H2,P1元素内容居中[center]</button><br>
+<button id="b2">设置p1字体大小为10px[font-size]</button><br>
+<button id="b3">设置p1元素字体颜色为红色[red]</button><br>
+<button id="b4">设置p2元素首行空两格[text-indent]且字体加粗</button>
+    <script>
+        $(function(){
+            $("#b1").click(function(){
+                $("h2,#p1").css("text-align","center");
+            });
+            
+            $("#b2").click(function(){
+                $("#p1").css("font-size","10px");
+            });
+            
+            $("#b3").click(function(){
+                $("#p1").css("color","red");
+            });
+            
+            $("#b4").click(function(){
+                $("#p2").css("text-indent","2em");
+                $("#p2").css("font-weight","bold");
+            });
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: rgba(49,131,229,1.00);
+            height: 50px;
+            padding-right: 70px;
+        }
+        header div {
+            float: right;
+        }
+        header div p {
+            height: 50px;
+            padding: 12px 0;
+            color: white
+        }
+        .body {
+            background-color: aqua;
+            height: 8000px;
+            width: 8000px;
+            position: fixed;
+        }
+        .login_box {
+            height: 350px;
+            width: 500px;
+            position: fixed;
+            margin: 230px 650px;
+            background-color: white;
+        }
+        .login_box img {
+            height: 20px;
+            width: 20px;
+            float: right;
+            margin: 12px;
+        }
+        .login_box h3 {
+            clear: both;
+            padding-bottom: 10px;
+            padding-left: 25px;
+        }
+        .login_box hr {
+            margin-bottom: 25px;
+        }
+        .login_box form {
+            width: 170px;
+            margin: 40px auto;
+            text-align: center;
+        }
+    
+        .login_box form input {
+            border: 1px dashed rgba(0,0,0,0.62);
+            height: 23px;
+            width: 170px;
+            margin: 5px 0;
+            align-content: center
+        }
+        .login_box form>a {
+            color: black;
+            font-size: 14px;
+            padding: 15px 0;
+        }
+    </style>
+    <script>
+     $(function() {
+		$('#btn_cancel').click(function() {
+			$('.login_box').hide();
+		})
+		$("p").click(()=>{
+			$(".login_box").toggle()
+		})
+	});
+    </script>
+</head>
+<body>
+    <header>
+		<div>
+			<p>登录/注册</p>
+		</div>
+	</header>
+	<div class="body">
+		<div class="login_box">
+			<img id="btn_cancel" src="img/cancel.png">
+			<h3>用户登录</h3>
+			<hr>
+			<form action="#" method="post">
+				<input class="inputbox" type="text" placeholder="用户名"><br>
+				<input class="inputbox" type="password" placeholder="密码"><br>
+				<a href="#" style="float: right">忘记密码</a><br>
+				<input type="submit" value="提交"><br><br>
+				<a href="#">用户注册</a>
+			</form>
+		</div>
+	</div>
+</body>
+<script>
+   $(function() {
+		$('#btn_cancel').click(function() {
+			$('.login_box').hide();
+		})
+		$("p").click(()=>{
+			$(".login_box").toggle()
+		})
+	});
+</script>
+</html>

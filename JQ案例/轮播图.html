@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQ轮播图</title>
+<script src="js/jquery-1.12.4.js"></script>
+<style>
+    *{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	.v_show .v_header{
+		width:98%;
+		margin: auto;
+		padding: 5px 15px;
+		border-bottom: 1px solid gray;
+	}
+	.v_show .v_header span{
+		float: right;
+		line-height: 30px;
+	}
+	.v_show .v_header span a{
+		text-decoration: none;
+		color: #222;
+		font-size: 12px
+	}
+    .v_show {
+		margin: 10px auto;
+		width: 800px;
+        border: 1px black solid;
+    }
+	.v_show .v_content {
+		height: 190px;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.v_show .v_control {
+		height: 30px;
+		text-align: center;
+	}
+	.v_show .v_content ul {
+		position: relative;
+		left: 0;
+		list-style: none;
+		width: 2500px;
+	}
+	.v_show .v_content ul li {
+		width: 180px;
+		height: 180px;
+		float: left;
+		margin: 9px 0 0 16px;
+		font-size: 14px;
+	}
+	.v_show .v_content ul li div {
+		width: 180px;
+		height: 100px;
+		overflow: hidden;
+		margin-bottom: 5px;
+	}
+	.v_show .v_content ul li a {
+		display: block;
+		width: 180px;
+		white-space: normal;
+		text-decoration: none;
+		color: black;
+		overflow: hidden;
+		margin-bottom: 5px;
+	}
+	.v_show .v_content ul li img {
+		width: 180px;
+	}
+	.v_show .v_control span {
+		display: inline-block;
+		border: 1px black solid;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+	span.current {
+		background-color: black;
+	}
+	a{
+		text-align: center
+	}
+	
+</style>
+</head>
+<body>
+	<div class="v_show">
+	<div class="v_header"><span><a href="#">更多校园风光 》</a></span>
+	<h3>校园风光</h3>
+	<div class="v_content">
+	<ul>
+		<li>
+			<div><a href="#"><img src="img/images/1.jpg" alt=""></a></div>
+			<a href="#">第一教学楼</a>
+			<span>点击：2,536</span>
+		</li>
+		<!--【由于篇幅限制，此处省略 10 个 li 元素】-->
+		<li>
+			<div><a href="#"><img src="img/images/2.jpg" alt=""></a></div>
+			<a href="#">北校门口</a>
+			<span>点击：2,536</span>
+		</li>
+		<li>
+			<div><a href="#"><img src="img/images/3.jpg" alt=""></a></div>
+			<a href="#">第一教学楼</a>
+			<span>点击：2,536</span>
+		</li>
+		<!--【由于篇幅限制，此处省略 10 个 li 元素】-->
+		<li>
+			<div><a href="#"><img src="img/images/4.jpg" alt=""></a></div>
+			<a href="#">北校门口</a>
+			<span>点击：2,536</span>
+		</li>
+	</ul>
+	</div>
+	<div class="v_control">
+		<button id="prev"></button>
+		<span class="current"></span>
+		<span></span>
+		<span></span>
+		<button id="next"></button>
+	</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>DOM操作---多选框案例</title>
+        <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+        <style>
+            #multiple1{margin-left: 130px;}
+            .inpt{width: 100px;margin-left: 120px;margin-top: -150;}
+            input{margin-top: 5px; }
+            .font{margin-left: 230px;margin-top: -40px;}
+        </style>
+        <script type="text/javascript" >
+            $(function(){
+                $("#add").click(function(){
+                    var $de=$("#multiple option:selected").remove();
+                    $de.appendTo(multiple1);
+                });
+                $("#all").click(function(){
+                    var $add=$("#multiple option");
+                    var $as=$("#multiple1")
+                    $($add).appendTo($as);
+                });
+                $("#left").click(function(){
+                    $("#multiple1 option:selected").appendTo(multiple);
+                });
+                $("#leftAll").click(function(){
+                    var $add=$("#multiple ");
+                    var $as=$("#multiple1 option")
+                    $($as).appendTo($add);
+                });
+            })
+        </script> </head>
+    <body>
+         <div>
+            <h3>明星列表</h3>
+            <h3 class="font">最喜欢明星列表</h3>
+
+        <select id="multiple" multiple="multiple" style="height: 150px;width: 100px">
+            <option>张学友</option>
+            <option>刘德华</option>
+            <option>周杰伦</option>
+            <option>古天乐</option>
+            <option>章子怡</option>
+        </select>
+        <select id="multiple1" multiple="multiple" style="height: 150px;width: 100px"></select> <br>
+        <div class="inpt">
+            <input id="add" type="button" value="批量右移>>>"><br>
+            <input id="all" type="button" value="全部右移>>>"><br>
+            <input id="left" type="button" value="批量左移>>>"><br>
+            <input id="leftAll" type="button" value="全部左移>>>"><br> </div> </body> </html>
+         </div>

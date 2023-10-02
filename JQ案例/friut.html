@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM</title> 
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+$(function(){ 
+         $("#b1").click(function(){
+            $("ul").append("<li>香蕉</li>");
+         });
+         $("#b2").click(function(){
+            $("ul li:last").remove();
+         });
+         $("#b3").click(function(){
+            $("ul li:last").clone().prependTo("ul");
+         });
+	 $("#b4").click(function(){
+        $("ul li:last").empty();
+         });
+         $("#b5").click(function(){ 
+            var m=$("#t1").val();
+            $("ul").append("<li>"+m+"</li>");
+         });  
+	 $("#b6").click(function(){
+        var m=$("#t2").val();
+        $("li:contains("+m+")").remove();
+         });  
+   });
+</script>
+</head>
+<body>
+<h2>你最喜欢的水果是？</h2>
+<div> 
+    <ul> 
+        <li>苹果</li> 
+        <li>菠萝</li>  
+	<li>橘子</li> 
+    </ul>
+	<input type="button" id="b1" value="新增“香蕉”" /><br>
+	<input type="button" id="b2" value="删除“香蕉”" /><br>
+	<br>
+	<input type="button" id="b3" value="将“香蕉”节点复制到第一列" />
+	<br><input type="button" id="b4" value="将“香蕉”节点内容清空" />
+    
+	<br>
+	<input type="text" id="t1" value="菠萝" />
+    <input type="button" id="b5" value="新增水果" />
+	<br>
+	<input type="text" id="t2" value="菠萝" />
+    <input type="button" id="b6" value="删除水果" />
+</div>
+</body>
+</html>

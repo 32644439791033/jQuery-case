@@ -1,0 +1,54 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DOM案例：明星选择</title>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+        $("#id1").click(function(){
+            $("#like").append("<li>赵丽颖</li>");
+        });
+        $("#id2").click(function(){
+            $("#like li:last").remove().appendTo("#unlike li:last");
+        });
+        $("#id3").click(function(){
+            $("#unlike").append("<li></li>");
+            // document.getElementById("input3").value;
+        });
+        $("#id4").click(function(){
+            $("#unlike li:last").remove();
+        });
+	});
+</script>
+</head>
+<body>
+<div>
+<h2>你喜欢的明星是</h2>
+<ul id="like">
+<li>王一博</li>
+<li>蔡少坤</li>
+</ul>
+<input id="input1" type="text" value="" />
+<button id="id1">新增</button>
+<input id="input2" type="text" value="" />
+<button id="id2">删除</button>
+	
+<h2>你不喜欢的明星是</h2>
+<ul id="unlike">
+<li>王一博</li>
+<li>蔡少坤</li>
+</ul>
+
+<input id="input3" type="text" value="" />
+<button id="id3">新增</button>
+<input id="input4" type="text" value="" />
+<button id="id4">删除</button>
+
+</div>
+
+
+
+</body>
+</html>
